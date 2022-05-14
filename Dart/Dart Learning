@@ -1,0 +1,40 @@
+class Pessoa
+{
+  var nome;
+  var idade;
+  var altura;
+  
+  Pessoa(this.nome, this.idade, this.altura);
+  
+  Pessoa.nasceu(this.nome, this.altura)
+  {
+    idade = 0;
+    print("$nome acabou de nascer!");
+    dormir();
+  }
+  void dormir()
+  {
+    print("$nome está dormindo!");
+  }
+  void aniver()
+  {
+    idade++;
+  }
+}
+void main() {
+ //Apredendo a desenvolver em Dart
+ 
+ Pessoa pessoa1 = Pessoa("Lucas", 26, 1.85);
+  
+ Pessoa pessoa2 = Pessoa("Ana", 29, 1.65);
+
+ 
+  print(pessoa1.idade);
+  pessoa1.aniver();
+  pessoa2.aniver();
+  print(pessoa1.idade);
+  
+ Pessoa nene = Pessoa.nasceu("Enzo",0.3);
+  print (nene.idade);
+  print(nene.nome);
+}
